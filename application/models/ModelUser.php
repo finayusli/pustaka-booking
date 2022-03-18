@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class ModelUser extends CI_Model
@@ -11,13 +10,14 @@ class ModelUser extends CI_Model
 
     public function cekData($where = null)
     {
-        return $this->db->get_where('user',$where);
+        return $this->db->get_where('user', $where);
     }
 
     public function getUserWhere($where = null)
     {
-        return $this->db->get_where('user',$where);
+        return $this->db->get_where('user', $where);
     }
+
     public function cekUserAccess($where = null)
     {
         $this->db->select('*');
@@ -30,7 +30,8 @@ class ModelUser extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('user');
-        $this->db->where(10,0);
+        $this->db->limit(10, 0);
         return $this->db->get();
     }
+
 }

@@ -34,7 +34,7 @@
                         <select name="tahun" class="form-control form-control-user">
                             <option value="<?= $b['tahun_terbit']; ?>"><?= $b['tahun_terbit']; ?></option>
                             <?php
-                            for ($i = date('Y'); $i > 1000; $i--) { ?>
+                            for ($i = date('Y'); $i > 1500; $i--) { ?>
                                 <option value="<?= $i; ?>"><?= $i; ?></option>
                             <?php } ?>
                         </select>

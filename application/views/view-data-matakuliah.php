@@ -1,13 +1,15 @@
 <html>
+
 <head>
-    <title>View Data Mata Kuliah</title>
+    <title>Tampil Data Matakuliah</title>
 </head>
+
 <body>
     <center>
         <table>
             <tr>
                 <th colspan="3">
-                    <h4>Tampil Data Mata Kuliah</h4>
+                    Tampil Data Mata Kuliah
                 </th>
             </tr>
             <tr>
@@ -16,17 +18,17 @@
                 </td>
             </tr>
             <tr>
-                <td>Kode MTK</td>
+                <th>Kode MTK</th>
                 <th>:</th>
                 <td>
-                    <?= $nama; ?>
+                    <?= $kode; ?>
                 </td>
             </tr>
             <tr>
                 <td>Nama MTK</td>
                 <td>:</td>
                 <td>
-                    <?= $kode; ?>
+                    <?= $nama; ?>
                 </td>
             </tr>
             <tr>
@@ -37,14 +39,12 @@
                 </td>
             </tr>
             <tr>
-            <?php
-            ?>
-            <tr>
                 <td colspan="3" align="center">
-                    <a href="<?= base_url('Matakuliah'); ?>">Kembali</a>
+                    <a href="<?= base_url('matakuliah'); ?>">Kembali</a>
                 </td>
             </tr>
         </table>
     </center>
 </body>
+
 </html>
