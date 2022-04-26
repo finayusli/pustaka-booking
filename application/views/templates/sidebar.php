@@ -22,7 +22,7 @@
                         <!-- Nav Item - Dashboard -->
                         <li class="nav-item">
                             <a class="nav-link pb-0" href="<?= base_url('admin'); ?>">
-                                <i class="fas fa-tachometer-alt"></i>
+                            <i class="fas fa-tachometer-alt"></i>
                                 <span>Dashboard</span></a>
                         </li>
                     </li>
@@ -39,18 +39,39 @@
                         <!-- Nav Item - Dashboard -->
                         <li class="nav-item">
                             <a class="nav-link pb-0" href="<?= base_url('buku/kategori'); ?>">
-                                <i class="fas fa-book"></i>
+                            <i class="fas fa-book"></i>
                                 <span>Kategori Buku</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link pb-0" href="<?= base_url('buku'); ?>">
-                                <i class="fas fa-address-book"></i>
+                            <i class="fas fa-address-book"></i>
                                 <span>Data Buku</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link pb-0" href="<?= base_url('user/anggota'); ?>">
-                                <i class="fas fa-users"></i>
+                            <i class="fas fa-users"></i>
                                 <span>Data Anggota</span></a>
+                        </li>
+                    </li>
+                <!-- Divider -->
+                <hr class="sidebar-divider mt-3">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                  Transaksi
+                </div>
+                    <!-- Nav Item - Dashboard -->
+                    <li class="nav-item active">
+                        <!-- Nav Item - Dashboard -->
+                        <li class="nav-item">
+                            <a class="nav-link pb-0" href="<?= base_url('pinjam'); ?>">
+                            <i class="fa fa-fw fa-shopping-cart"></i>
+                                <span>Data Peminjaman</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pb-0" href="<?= base_url('pinjam/daftarBooking'); ?>">
+                            <i class="fa fa-fw fa-list"></i>
+                                <span>Data Booking</span></a>
                         </li>
                     </li>
                 <!-- Divider -->
@@ -62,6 +83,5 @@
             </div>
 
         </ul>
-        <!-- End of Sidebar --   > 
         
         
