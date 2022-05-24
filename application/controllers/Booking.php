@@ -134,7 +134,14 @@ class Booking extends CI_Controller
         $data['user'] = $this->session->userdata('nama');
         $data['judul'] = "Cetak Bukti Booking";
         $data['useraktif'] = $this->ModelUser->cekData(['id' => $this->session->userdata('id_user')])->result();
-        $data['items'] = $this->db->query("select*from booking bo, booking_detail d,buku bu where d.id_booking=bo.id_booking and d.id_buku=bu.id and bo.id_user='$id_user'")->result_array();
+        $data1 = $this->db->query("select*from booking bo, booking_detail d, buku bu where d.id_booking=bo.id_booking and d.id_buku=bu.id and bo.id_user='$id_user'")->num_rows();
+        if ($data1<1){
+            $this->session->set_flashdata('pesan','<div class="alert alert-massege alert-danger"role="alert">Tidak Ada Data Booking, Silahkan Lakukan Booking Terlebih Dahulu</div>');
+            redirect(base_url());
+        }
+        else {
+            $data['items'] = $this->db->query("select*from booking bo, booking_detail d, buku bu where d.id_booking=bo.id_booking and d.id_buku=bu.id and bo.id_user='$id_user'")->result_array();
+       
         // script untuk dompdf php versi 7.1.0 keatas
         $sroot = $_SERVER['DOCUMENT_ROOT'];
         include $sroot."/pustaka-booking/application/third_party/dompdf/autoload.inc.php";
@@ -152,5 +159,6 @@ class Booking extends CI_Controller
         $dompdf->stream("bukti-booking-$id_user.pdf", array('Attachment' => 0));
         // nama file pdf yang di hasilkan
     }
+}
 
 }
